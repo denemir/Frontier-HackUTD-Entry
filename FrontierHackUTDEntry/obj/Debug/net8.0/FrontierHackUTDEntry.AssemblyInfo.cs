@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FrontierHackUTDEntry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97a823b344d63127ef0a37a97fe45adc28c8c169")]
 [assembly: System.Reflection.AssemblyProductAttribute("FrontierHackUTDEntry")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FrontierHackUTDEntry")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
