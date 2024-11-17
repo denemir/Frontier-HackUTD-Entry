@@ -8,7 +8,7 @@ namespace FrontierHackUTDEntry.Services.Chatbot
     public class ChatbotServices : IChatbotServices
     {
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey = "0b64b29e-f81e-43ca-8c77-b81eb9079d74";
+        private readonly string _apiKey = "<api-key>";
 
         public ChatbotServices(HttpClient httpClient)
         {
