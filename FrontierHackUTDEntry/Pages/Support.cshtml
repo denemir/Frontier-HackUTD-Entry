@@ -23,34 +23,6 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css" />
-
-    <script>
-        var botui = new BotUI('my-botui-app');
-
-        // // Initialize with a welcome message
-        // botui.message.add({
-        //     content: 'Hello! How can I assist you today?',
-        //     delay: 500,
-        // }).then(function() {
-        //     // Enable user input
-        //     return botui.action.text({
-        //         action: {
-        //             placeholder: 'Type your message...'
-        //         }
-        //     });
-        // }).then(function(res) {
-        //     // Handle user input
-        //     // You can add your chat logic here
-        // });
-
-        botui.message.add({
-            content: 'Hello! How can I assist you today?',
-            delay: 1000,
-            loading: true
-        });
-
-
-    </script>
 </body>
 </html>
 
@@ -68,7 +40,7 @@
 
 	.chat-header {
 		padding: 20px;
-		background: #5c6bc0;
+		background: red;
 		color: white;
 		border-radius: 10px 10px 0 0;
 	}
@@ -100,13 +72,15 @@
 	}
 
 	.botui-message-content {
+		background: red;
+		color: white;
 		border-radius: 15px;
 		padding: 10px 15px;
 		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	}
 
 		.botui-message-content.human {
-			background: #E3F2FD;
+			background: gray;
 			margin-left: auto;
 			border-bottom-right-radius: 5px;
 		}
