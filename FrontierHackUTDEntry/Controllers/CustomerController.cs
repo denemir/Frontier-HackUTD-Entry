@@ -1,22 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-public class HomeController : Controller
+public class CustomerController : Controller
 {
-    private readonly IRepository<Customer> _repository;
+    private readonly ICustomerService _customerService;
 
-    // Inject the repository using the constructor
-    public HomeController(IRepository<Customer> repository)
+    public CustomerController(ICustomerService customerService)
     {
-        _repository = repository;
+        _customerService = customerService;
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAllCustomers()
+    {
+        var customers = await _customerService.GetAllCustomersAsync();
+        return Json(customers);
+    }  
+
+    /*
     public async Task<IActionResult> Index()
     {
         // Use the repository to fetch all data
         var entities = await _repository.GetAllAsync();
         return View(entities); // Pass data to the view
     }
+    
 
     public async Task<IActionResult> Details(int id)
     {
@@ -38,4 +46,5 @@ public class HomeController : Controller
         }
         return View(entity);
     }
+    */
 }
