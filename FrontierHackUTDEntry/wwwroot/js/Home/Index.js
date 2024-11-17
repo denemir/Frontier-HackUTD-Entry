@@ -1,4 +1,40 @@
-﻿$.ajax({
+﻿$('#account-id-box').keypress(function (e) {
+    var input = e.currentTarget.value; //000060be4aa292815abc44ab6fe96015b89e83b21c8a63473ee216fd67998a99
+    if (e.which == 13) {
+        $.ajax({
+            url: 'api/Customers/DoesAccountExist',
+            method: 'GET',
+            data: { acctId: input },
+        }).done(function (result) {
+            if (result == 'true') {
+                $.ajax({
+                    url: 'api/Customers/GetCustomerById',
+                    method: 'GET',
+                    data: { id: input },
+                }).done(function (response) {
+                    console.log(response);
+                }).fail(function () {
+                    console.log("Failed to find Customer");
+                    $('#account-warning').prop('hidden', false);
+                });
+            }
+            else {
+                $('#account-warning').prop('hidden', false);
+            }
+            });
+
+        $.ajax({
+            url: 'api/Customers/GetCustomerById',
+            method: 'GET',
+            data: { id: e.currentTarget.value },
+        }).done(function (response) {
+            console.log(response);
+        }).fail(function () {
+            console.log("Failed to find Customer");
+        });
+    }
+});
+$.ajax({
     url: 'api/Customers/GetCustomerById',
     method: 'GET',
     data: { id: '000060be4aa292815abc44ab6fe96015b89e83b21c8a63473ee216fd67998a99' },

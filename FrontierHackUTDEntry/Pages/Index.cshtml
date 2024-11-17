@@ -9,11 +9,17 @@
     <p class="text">Please enter your Account ID to get started!</p>
     <p class="text">Or start a conversation with our bot on the support page.</p>
     <input id="account-id-box" class="account-id-box" type="text" placeholder="Account ID" />
+    <h6 id="account-warning" class="account-warning" hidden >An account with that Account ID was not found.</h6>
 </div>
 
 <style>
     .text {
         font-family: 'DM Sans', sans-serif;
+    }
+
+    .account-warning {
+        color: red;
+        font-weight: 500;
     }
 </style>
 
