@@ -3,3 +3,149 @@
 @{
 	ViewData["Title"] = "Support";
 }
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="chat-container" id="my-botui-app">
+        <div class="chat-header">
+            <h2>Chat Assistant</h2>
+        </div>
+        <div class="chat-messages">
+            <bot-ui></bot-ui>
+        </div>
+        <div class="chat-input-container">
+            <!-- BotUI will automatically inject the input field here -->
+            <input type="text" id="chat-input" />
+        </div>
+    </div>
+
+    <!-- BotUI Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/botui/build/botui.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/botui/build/botui-theme-default.css" />
+
+    <script>
+        var botui = new BotUI('my-botui-app');
+
+        // // Initialize with a welcome message
+        // botui.message.add({
+        //     content: 'Hello! How can I assist you today?',
+        //     delay: 500,
+        // }).then(function() {
+        //     // Enable user input
+        //     return botui.action.text({
+        //         action: {
+        //             placeholder: 'Type your message...'
+        //         }
+        //     });
+        // }).then(function(res) {
+        //     // Handle user input
+        //     // You can add your chat logic here
+        // });
+
+        botui.message.add({
+            content: 'Hello! How can I assist you today?',
+            delay: 1000,
+            loading: true
+        });
+
+
+    </script>
+</body>
+</html>
+
+<style>
+	.chat-container {
+		max-width: 800px;
+		margin: 20px auto;
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		height: 600px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.chat-header {
+		padding: 20px;
+		background: #5c6bc0;
+		color: white;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.chat-messages {
+		flex: 1;
+		overflow-y: auto;
+		padding: 20px;
+		background: #f5f5f5;
+	}
+
+	.chat-input-container {
+		padding: 20px;
+		border-top: 1px solid #eee;
+		background: white;
+		border-radius: 0 0 10px 10px;
+	}
+
+	.botui-app-container {
+		height: 100%;
+	}
+
+	.botui-container {
+		background: transparent;
+	}
+
+	.botui-message {
+		margin: 10px 0;
+	}
+
+	.botui-message-content {
+		border-radius: 15px;
+		padding: 10px 15px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+
+		.botui-message-content.human {
+			background: #E3F2FD;
+			margin-left: auto;
+			border-bottom-right-radius: 5px;
+		}
+
+		.botui-message-content.bot {
+			background: white;
+			margin-right: auto;
+			border-bottom-left-radius: 5px;
+		}
+
+	.botui-actions-container {
+		padding: 10px 0;
+	}
+
+	.botui-actions-text-input {
+		border: 1px solid #ddd;
+		border-radius: 20px;
+		padding: 8px 15px;
+		width: 100%;
+		outline: none;
+	}
+
+	.botui-actions-text-submit {
+		background: #5c6bc0;
+		color: white;
+		border: none;
+		border-radius: 20px;
+		padding: 8px 20px;
+		cursor: pointer;
+		margin-left: 10px;
+	}
+
+		.botui-actions-text-submit:hover {
+			background: #3f51b5;
+		}
+
+	.chat-input {
+		border-radius: 15px;
+	}
+</style>
