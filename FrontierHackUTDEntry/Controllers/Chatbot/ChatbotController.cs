@@ -24,11 +24,13 @@
             var responseContent = await _chatbotService.SendMessageToApi(userMessage);
             return Ok(responseContent);
         }
+
+        //[HttpPost]
+        //public void SetPromptFromAcctId(string acctId)
+        //{
+        //    _chatbotService.SetPromptFromAcctId(acctId);
+        //}
     }
 
-    public class Message
-    {
-        public string Input { get; set; }
-    }
 
 }

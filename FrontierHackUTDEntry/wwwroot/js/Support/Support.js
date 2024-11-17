@@ -1,6 +1,16 @@
 ﻿var botui = new BotUI('my-botui-app');
 
 $(document).ready(function () {
+    //$.ajax({
+    //    url: '/api/Chatbot/SetPromptFromAcctId',
+    //    contentType: "application/x-www-form-urlencoded",
+    //    method: 'POST',
+    //    data: { userMessage: msg },
+    //    async: false,
+    //}).done(function (response) {
+    //    receiveMessage(response);
+    //});
+
     botui.message.add({
         content: 'Hello! How can I assist you today?',
         delay: 1000,

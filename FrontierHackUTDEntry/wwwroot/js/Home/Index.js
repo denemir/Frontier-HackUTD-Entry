@@ -14,7 +14,19 @@
                     method: 'GET',
                     data: { id: input },
                 }).done(function (response) {
-                    console.log(response);
+                    $.ajax({
+                        url: 'Support', // URL for the Support page
+                        method: 'GET',
+                        data: { ticketId: '12345' }, // Pass ticketId as query string
+                        success: function (response) {
+
+                            // Navigate to the page after processing
+                            window.location.href = '/Support?ticketId=12345';
+                        },
+                        error: function () {
+                            console.log('AJAX call failed.');
+                        }
+                    });
                 }).fail(function () {
                     console.log("Failed to find Customer");
                     $('#account-warning').prop('hidden', false);

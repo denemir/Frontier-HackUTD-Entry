@@ -7,8 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped(typeof(IRepository<Customer>), typeof(Repository));
-builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IChatbotServices, ChatbotServices>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {

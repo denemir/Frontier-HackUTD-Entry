@@ -3,10 +3,12 @@
 public class CustomerService : ICustomerService
 {
     private readonly IRepository<Customer> _repository;
+    private readonly HttpClient _httpClient;
 
-    public CustomerService(IRepository<Customer> repository)
+    public CustomerService(IRepository<Customer> repository, HttpClient httpClient)
     {
         _repository = repository;
+        _httpClient = httpClient;   
     }
 
     public async Task<IEnumerable<Customer>> GetAllCustomersAsync()
