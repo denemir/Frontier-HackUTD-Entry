@@ -5,8 +5,10 @@
             url: 'api/Customers/DoesAccountExist',
             method: 'GET',
             data: { acctId: input },
+            async: false,
         }).done(function (result) {
-            if (result == 'true') {
+            if (result.exists == true) {
+                $('#account-warning').prop('hidden', true);
                 $.ajax({
                     url: 'api/Customers/GetCustomerById',
                     method: 'GET',

@@ -17,12 +17,12 @@ public class CustomersController : Controller
         return Json(customers);
     }
 
-    [HttpGet("DoesAccountExist")]
+    [HttpGet]
     public async Task<IActionResult> DoesAccountExist(string acctId)
     {
-        var exists = _customerService.GetAllCustomersAsync().Result.Where(x => x.AcctId == acctId) != null;
+        var customer = _customerService.GetAllCustomersAsync().Result.Where(x => x.AcctId == acctId).FirstOrDefault();
 
-        return Ok(new { exists });
+        return Ok(new { exists = (customer != null) });
     }
 
     [HttpGet]
