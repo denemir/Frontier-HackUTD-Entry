@@ -14,10 +14,7 @@
         <div class="chat-messages">
             <bot-ui></bot-ui>
         </div>
-        <div class="chat-input-container">
-            <!-- BotUI will automatically inject the input field here -->
-            <input type="text" id="chat-input" />
-        </div>
+        <input class="chat-input-container" />
     </div>
 
     <!-- BotUI Scripts -->
@@ -147,5 +144,12 @@
 
 	.chat-input {
 		border-radius: 15px;
+		padding: 20px;
+		border-top: 1px solid #eee;
+		background: white;
+		border-radius: 0 0 10px 10px;
+		z-index: 999;
+		min-width: auto;
+		min-height: auto;
 	}
 </style>
