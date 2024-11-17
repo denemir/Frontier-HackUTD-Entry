@@ -19,11 +19,16 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> SendMessage([FromBody] string userMessage)
+        public async Task<IActionResult> SendMessage(string userMessage)
         {
             var responseContent = await _chatbotService.SendMessageToApi(userMessage);
             return Ok(responseContent);
         }
+    }
+
+    public class Message
+    {
+        public string Input { get; set; }
     }
 
 }

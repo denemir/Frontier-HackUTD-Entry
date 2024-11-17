@@ -1,21 +1,12 @@
 ﻿$('#chat').keypress(function (e) {
-    console.log('test');
     if (e.which == 13) {
-        console.log('test 1')
         $.ajax({
-            url: 'api/Chatbot/SendMessage',
+            url: '/api/Chatbot/SendMessage',
+            contentType: "application/x-www-form-urlencoded",
             method: 'POST',
-            data: { userMessage: JSON.stringify(e.currentTarget.value) },
-            success: function (response) {
-                console.log('test 2');
-            }
+            data: { userMessage: e.currentTarget.value },
         }).done(function (response) {
-            e.currentTarget.value = '';
-            console.log(response);
-        }).fail(function (e) {
-            console.log(e);
+            $('#chat').val('');
         });
     }
 });
-
-console.log($('#chat'));
