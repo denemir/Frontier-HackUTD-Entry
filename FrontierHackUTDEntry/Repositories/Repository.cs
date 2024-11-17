@@ -17,6 +17,11 @@ public class Repository : IRepository<Customer>
         return await _dbSet.ToListAsync();
     }
 
+    public async Task<bool> DoesAccountExistAsync(string acctId)
+    {
+        return await _dbSet.AnyAsync(c => c.AcctId == acctId);
+    }
+
     public async Task<Customer> GetByIdAsync(string id)
     {
         return await _dbSet.FindAsync(id);

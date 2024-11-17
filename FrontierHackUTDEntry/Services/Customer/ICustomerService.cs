@@ -1,4 +1,6 @@
-﻿public interface ICustomerService
+﻿using Microsoft.AspNetCore.Mvc;
+
+public interface ICustomerService
 {
     Task<IEnumerable<Customer>> GetAllCustomersAsync();
     Task<Customer> GetCustomerByIdAsync(string id);

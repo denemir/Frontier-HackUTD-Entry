@@ -17,6 +17,14 @@ public class CustomersController : Controller
         return Json(customers);
     }
 
+    [HttpGet("DoesAccountExist")]
+    public async Task<IActionResult> DoesAccountExist(string acctId)
+    {
+        var exists = _customerService.GetAllCustomersAsync().Result.Where(x => x.AcctId == acctId) != null;
+
+        return Ok(new { exists });
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetCustomerById(string id)
     {
