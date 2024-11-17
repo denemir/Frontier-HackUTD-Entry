@@ -14,7 +14,7 @@ public class CustomerService : ICustomerService
         return await _repository.GetAllAsync();
     }
 
-    public async Task<Customer> GetCustomerByIdAsync(int id)
+    public async Task<Customer> GetCustomerByIdAsync(string id)
     {
         return await _repository.GetByIdAsync(id);
     }
@@ -24,7 +24,7 @@ public class CustomerService : ICustomerService
         await _repository.AddAsync(customer);
     }
 
-    public async Task UpdateCustomerAsync(int id, Customer customer)
+    public async Task UpdateCustomerAsync(string id, Customer customer)
     {
         var existingCustomer = await _repository.GetByIdAsync(id);
         if (existingCustomer != null)
@@ -33,7 +33,7 @@ public class CustomerService : ICustomerService
         }
     }
 
-    public async Task DeleteCustomerAsync(int id)
+    public async Task DeleteCustomerAsync(string id)
     {
         await _repository.DeleteAsync(id);
     }

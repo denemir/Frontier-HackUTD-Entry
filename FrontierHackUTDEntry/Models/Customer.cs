@@ -1,6 +1,10 @@
-﻿public class Customer
+﻿using System.ComponentModel.DataAnnotations;
+
+public class Customer
 {
+    [Key]
     public string AcctId { get; set; }
+
     public int Extenders { get; set; }
     public int WirelessClientsCount { get; set; }
     public int WiredClientsCount { get; set; }

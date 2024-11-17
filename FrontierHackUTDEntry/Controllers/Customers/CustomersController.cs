@@ -15,5 +15,12 @@ public class CustomersController : Controller
     {
         var customers = await _customerService.GetAllCustomersAsync();
         return Json(customers);
-    }  
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetCustomerById(string id)
+    {
+        var customers = await _customerService.GetCustomerByIdAsync(id);
+        return Json(customers);
+    }
 }

@@ -17,7 +17,7 @@ public class Repository : IRepository<Customer>
         return await _dbSet.ToListAsync();
     }
 
-    public async Task<Customer> GetByIdAsync(int id)
+    public async Task<Customer> GetByIdAsync(string id)
     {
         return await _dbSet.FindAsync(id);
     }
@@ -34,7 +34,7 @@ public class Repository : IRepository<Customer>
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int id)
+    public async Task DeleteAsync(string id)
     {
         var entity = await _dbSet.FindAsync(id);
         if (entity != null)
