@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Services\Support\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

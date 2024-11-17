@@ -1,3 +1,4 @@
+using FrontierHackUTDEntry.Services.Chatbot;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped(typeof(IRepository<Customer>), typeof(Repository));
 builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IChatbotServices, ChatbotServices>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
@@ -21,6 +23,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 errorNumbersToAdd: null)
     );
 });
+
+builder.Services.AddHttpClient<IChatbotServices, ChatbotServices>();
 
 var app = builder.Build();
 
