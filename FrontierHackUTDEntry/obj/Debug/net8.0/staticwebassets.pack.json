@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\images\\FrontierLogo.webp",
+      "PackagePath": "staticwebassets\\images\\FrontierLogo.webp"
+    },
+    {
       "Id": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

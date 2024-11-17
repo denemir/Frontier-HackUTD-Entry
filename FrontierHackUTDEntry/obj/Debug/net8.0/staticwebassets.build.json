@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5O+XSwM5AVRBCHS9d28sNPj2CCWJJ9hhBYP7e0fE8+4=",
+  "Hash": "K3iQ46BOJmlavKSTzOVYdFCyFiJsN3hzigTLGPGTtP8=",
   "Source": "FrontierHackUTDEntry",
   "BasePath": "_content/FrontierHackUTDEntry",
   "Mode": "Default",
@@ -99,6 +99,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\images\\FrontierLogo.webp",
+      "SourceId": "FrontierHackUTDEntry",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\",
+      "BasePath": "_content/FrontierHackUTDEntry",
+      "RelativePath": "images/FrontierLogo#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tw3wastn5x",
+      "Integrity": "M1oZsiuMuvOlUF5UgC07+Hdjq3lsmwvRlr9cv6eHE/U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\FrontierLogo.webp"
     },
     {
       "Identity": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\js\\site.js",
@@ -1645,6 +1666,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-hc71gN+kEJUjgum2NKOL56qSQf8mdnYpH7BoT39leQI="
+        }
+      ]
+    },
+    {
+      "Route": "images/FrontierLogo.tw3wastn5x.webp",
+      "AssetFile": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\images\\FrontierLogo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M1oZsiuMuvOlUF5UgC07+Hdjq3lsmwvRlr9cv6eHE/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 17 Nov 2024 03:13:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tw3wastn5x"
+        },
+        {
+          "Name": "label",
+          "Value": "images/FrontierLogo.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M1oZsiuMuvOlUF5UgC07+Hdjq3lsmwvRlr9cv6eHE/U="
+        }
+      ]
+    },
+    {
+      "Route": "images/FrontierLogo.webp",
+      "AssetFile": "C:\\Users\\riley\\Documents\\GitHub\\Frontier-HackUTD-Entry\\FrontierHackUTDEntry\\wwwroot\\images\\FrontierLogo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M1oZsiuMuvOlUF5UgC07+Hdjq3lsmwvRlr9cv6eHE/U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 17 Nov 2024 03:13:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M1oZsiuMuvOlUF5UgC07+Hdjq3lsmwvRlr9cv6eHE/U="
         }
       ]
     },
